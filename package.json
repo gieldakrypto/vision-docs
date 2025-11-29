@@ -1,0 +1,12 @@
+{
+  "name": "vision-tools-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "echo 'Build complete – static files ready in /public'",
+    "deploy": "wrangler pages publish public"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.2024"
+  }
+}

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Vision™ • All Tools 2025</title>
+  
+  <!-- Style -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="icon" href="https://raw.githubusercontent.com/gieldakrypto/vision-docs/refs/heads/main/logo-v2.png" />
+
+  <!-- Disable DevTool (F12, right-click, Ctrl+Shift+I, etc.) -->
+  <script src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+  <script>
+    DisableDevtool({
+      interval: 800,
+      disableMenu: true,
+      stopMouseEvent: true,
+      ignore: [],
+      onDevToolOpen: () => {
+        document.documentElement.innerHTML = `
+          <div style="position:fixed;top:0;left:0;width:100vw;height:100vh;background:#0d0d12;color:#a855f7;display:flex;align-items:center;justify-content:center;flex-direction:column;font-family:Segoe UI,sans-serif;text-align:center;padding:20px;">
+            <h1 style="font-size:4rem;margin:0;">Nice try</h1>
+            <p style="font-size:1.8rem;margin:20px 0 0;">Vision™ is protected.</p>
+            <a href="/" style="margin-top:30px;color:#fff;text-decoration:underline;font-size:1.2rem;">Go back home</a>
+          </div>`;
+      }
+    });
+  </script>
+</head>
+<body>
+
+  <div class="mobile-menu-btn">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-header">
+      <img src="https://raw.githubusercontent.com/gieldakrypto/vision-docs/refs/heads/main/logo-v2.png" alt="Vision" class="logo" />
+      <h2>Vision™ Tools</h2>
+      <p>All Versions • 2025</p>
+    </div>
+    <nav class="nav">
+      <div class="nav-category">Vision™</div>
+      <a href="#home" class="nav-link active"><i class="fas fa-house"></i> Home</a>
+
+      <div class="nav-category">Raider</div>
+      <a href="#raider-v1" class="nav-link"><i class="fas fa-skull"></i> Raider v1 <span class="live">ONLINE</span></a>
+      <a href="#raider-v2" class="nav-link"><i class="fas fa-bomb"></i> Raider v2 <span class="live">ONLINE</span></a>
+
+      <div class="nav-category">Nuker</div>
+      <a href="#nuker-v1" class="nav-link"><i class="fas fa-radiation"></i> Nuker v1 <span class="soon">SOON</span></a>
+
+      <div class="nav-category">Webhooks</div>
+      <a href="#webhook-v1" class="nav-link"><i class="fas fa-bolt"></i> Webhook Spammer <span class="live">ONLINE</span></a>
+      <a href="#webhook-editor" class="nav-link"><i class="fas fa-pen"></i> Webhook Editor <span class="soon">SOON</span></a>
+
+      <div class="nav-category">Info</div>
+      <a href="#about" class="nav-link"><i class="fas fa-info-circle"></i> About Vision™</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="https://discord.gg/UJsVfGpjxQ" target="_blank" class="join-btn">
+        <i class="fab fa-discord"></i> Join Vision Server
+      </a>
+    </div>
+  </aside>
+
+  <main class="content">
+
+    <!-- HOME -->
+    <section id="home" class="section active">
+      <h1><i class="fas fa-house"></i> Home</h1>
+      <div class="discord-widget">
+        <iframe
+          src="https://ptb.discord.com/widget?id=1437807939137306798&theme=dark"
+          width="100%"
+          height="500"
+          allowtransparency="true"
+          frameborder="0"
+          sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+        </iframe>
+      </div>
+    </section>
+
+    <!-- RAIDER V2 -->
+    <section id="raider-v2" class="section">
+      <h1><i class="fas fa-bomb"></i> Vision Raider v2</h1>
+      <div class="stats">
+        <div><strong>270+</strong> Servers Raided</div>
+        <div><strong>100%</strong> Free</div>
+        <div><strong>v2</strong> Latest</div>
+      </div>
+      <h2>Commands</h2>
+      <div class="cmd-grid">
+        <div class="cmd-card premium"><h3>/raid</h3><code>/raid</code><p>Raid any server without admin!</p><span class="badge free">Free custom message in V2!</span></div>
+        <div class="cmd-card"><h3>/ghostping</h3><code>/ghostping [user]</code><p>Ghost ping anyone!</p></div>
+        <div class="cmd-card"><h3>/ghostping-role</h3><code>/ghostping-role [role]</code><p>Ghost ping any role!</p></div>
+        <div class="cmd-card"><h3>/fake-message</h3><code>/fake-message [user] [message]</code><p>Perfect fake message with role color & bot tag</p></div>
+        <div class="cmd-card"><h3>/femboyify</h3><code>/femboyify [user]</code><p>Turn any user into a femboy</p></div>
+        <div class="cmd-card"><h3>/say</h3><code>/say [message]</code><p>Say anything you want but with the bot lol</p></div>
+        <div class="cmd-card"><h3>/user-lookup</h3><code>/user-lookup [id]</code><p>Get information about user</p></div>
+      </div>
+    </section>
+
+    <!-- RAIDER V1 -->
+    <section id="raider-v1" class="section">
+      <h1><i class="fas fa-skull"></i> Vision Raider v1</h1>
+      <div class="stats"><div><strong>71%</strong> Of Free Commands</div></div>
+
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="openTab(event,'free')">Free Commands</button>
+        <button class="tab-btn" onclick="openTab(event,'premium')">Premium Commands</button>
+      </div>
+
+      <div id="free" class="tab-content active">
+        <h2>Free Commands</h2>
+        <div class="cmd-grid">
+          <div class="cmd-card"><h3>/raid</h3><code>/raid [delay]</code><p>RAID any server or DM with a button to spam 5 messages.</p></div>
+          <div class="cmd-card"><h3>/spam</h3><code>/spam [delay]</code><p>Spam the channel with a button to send 5 messages of GIFs.</p></div>
+          <div class="cmd-card"><h3>/ghostping</h3><code>/ghostping [user]</code><p>GhostPing somebody 3 times.</p></div>
+          <div class="cmd-card"><h3>/say</h3><code>/say [message]</code><p>Make the bot say something you want, publicly.</p></div>
+          <div class="cmd-card"><h3>/fake-message</h3><code>/fake-message [user] [message]</code><p>Send a realistic fake message as image.</p></div>
+          <div class="cmd-card"><h3>/avatar</h3><code>/avatar [user]</code><p>Get a user's avatar and banner.</p></div>
+          <div class="cmd-card"><h3>/ip</h3><code>/ip [user]</code><p>Reveal a user's IP to scare them! (fake)</p></div>
+          <div class="cmd-card"><h3>/blame</h3><code>/blame [user]</code><p>Blame somebody else for raiding!</p></div>
+          <div class="cmd-card"><h3>/anon-dm</h3><code>/anon-dm [user] [message]</code><p>Anonymously DM someone with a message.</p></div>
+          <div class="cmd-card"><h3>/ping</h3><code>/ping [file]</code><p>Ping random IDs from a .txt file using a button.</p></div>
+        </div>
+      </div>
+
+      <div id="premium" class="tab-content">
+        <h2>Premium Commands</h2>
+        <div class="cmd-grid">
+          <div class="cmd-card premium"><h3>/custom-raid</h3><code>/custom-raid [message]</code><p>Premium Raid with a button to spam your own message or preset.</p></div>
+          <div class="cmd-card premium"><h3>/flooduser</h3><code>/flooduser [user] [delay]</code><p>Flood user's DMs with a button to send 5 messages.</p></div>
+          <div class="cmd-card premium"><h3>/ghostping-role</h3><code>/ghostping-role [role]</code><p>Ghost ping a role 3 times.</p></div>
+          <div class="cmd-card premium"><h3>/custom-embed</h3><code>/custom-embed [title] [description]</code><p>Send a fully customized embed with buttons, thumbnail, footer, etc.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUKER V1 -->
+    <section id="nuker-v1" class="section">
+      <div class="coming-soon">
+        <div class="bg-blur"></div>
+        <div class="soon-content">
+          <h1>Vision Nuker</h1>
+          <p class="soon-text">SOON...</p>
+          <p>The best nuker bot is coming...</p>
+          <span class="soon-badge">Q1 2026 — Stay Ready</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WEBHOOK SPAMMER -->
+    <section id="webhook-v1" class="section">
+      <h1>Webhook Spammer</h1>
+      <p>Made in rust • 150 messages in 12 seconds</p>
+      <div class="highlight">
+        <strong>Features:</strong><br>
+        • Multi-threaded<br>
+        • Auto-retry on rate limit<br>
+        • Modal setup in Discord<br>
+        • Without admin<br>
+      </div>
+      <a href="https://discord.gg/UJsVfGpjxQ" class="btn-primary">Get Now</a>
+    </section>
+
+    <!-- ABOUT -->
+    < <section id="about" class="section">
+      <div class="about-container">
+        <div class="about-card">
+          <h1><i class="fas fa-info-circle"></i> About Vision™</h1>
+          <p class="subtitle">Project History • Developers</p>
+          <div class="divider"></div>
+          <h2>The Project History</h2>
+          <p class="history-text">
+            I started the Vision™ project in mid-2025, because i wanted to make free "Insomnia" copy.<br>
+            I didn't even know what "Insomnia" was at the beginning, my friend raided some server that i was in
+            and i just joined the server from the raid message and i started to <strong>copy</strong> their discord server
+            and bot to make it free (which i turned into better premium later).
+          </p>
+          <h2>Devs</h2>
+          <div class="devs-grid">
+            <div class="dev-card">
+              <h3>zjya</h3>
+              <p class="role">Founder • Bot Dev</p>
+              <p class="desc">Idk i just made it for fun.</p>
+            </div>
+            <div class="dev-card">
+              <h3>Grok</h3>
+              <p class="role">Designer • Site Dev • Rust Bot dev</p>
+              <p class="desc">I used Grok to make Webhook Spammer in rust and to make this website,<br>i also used it to make command descriptions in Raider V1</p>
+            </div>
+          </div>
+          <div class="join-center">
+            <a href="https://discord.gg/UJsVfGpjxQ" class="btn-primary large">
+              <i class="fab fa-discord"></i> Join Our Discord
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

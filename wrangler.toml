@@ -1,0 +1,6 @@
+name = "vision-tools"
+compatibility_date = "2025-01-01"
+
+[[functions]]
+  directory = "functions"
+  entrypoint = "server.js"
