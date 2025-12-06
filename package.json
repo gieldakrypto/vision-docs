@@ -1,12 +1,9 @@
 {
-  "name": "vision-tools-site",
+  "name": "discord-fake-gif",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
-    "build": "echo 'Build complete – static files ready in /public'",
-    "deploy": "wrangler pages publish public"
+    "dev": "vercel dev",
+    "build": "echo 'nothing to build'"
   },
-  "devDependencies": {
-    "@cloudflare/workers-types": "^4.2024"
-  }
+  "dependencies": {}
 }
