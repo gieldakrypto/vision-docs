@@ -1,11 +1,10 @@
-// functions/server.js
 export const onRequest = async ({ request, next }) => {
   const url = new URL(request.url);
   const pathname = url.pathname;
 
   if (pathname === "/invite.gif") {
     const accept = request.headers.get("Accept") || "";
-    
+
     if (accept.includes("image")) {
       const gifUrl = new URL("../public/invite.gif", import.meta.url);
       const gifResponse = await fetch(gifUrl);
