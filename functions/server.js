@@ -1,9 +1,23 @@
 // functions/server.js
+import { readFile } from "fs/promises";
+
 export const onRequest = async ({ request, next }) => {
   const url = new URL(request.url);
-  let pathname = url.pathname;
+  const pathname = url.pathname;
 
-  // Always serve index.html for clean URLs (SPA routing)
+  if (pathname === "/invite.gif") {
+    const accept = request.headers.get("Accept") || "";
+    
+    if (accept.includes("image")) {
+      const gif = await readFile("./invite.gif");
+      return new Response(gif, {
+        headers: { "Content-Type": "image/gif" }
+      });
+    } else {
+      return Response.redirect("https://discord.gg/UJsVfGpjxQ", 302);
+    }
+  }
+
   if (pathname.startsWith("/css/") || 
       pathname.startsWith("/js/") || 
       pathname.startsWith("/images/") || 
@@ -13,13 +27,11 @@ export const onRequest = async ({ request, next }) => {
     return next();
   }
 
-  // Handle root and any other path → serve index.html
   if (pathname === "/" || !pathname.includes(".")) {
     return new Response(await fetch(new Request(new URL("/index.html", request.url), request)), {
       headers: { "content-type": "text/html; charset=utf-8" }
     });
   }
 
-  // For all other files (just in case), try to serve them
   return next();
 };
