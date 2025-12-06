@@ -1,12 +1,18 @@
-export default async function handler(req, res) {
-  const ua = req.headers["user-agent"] || "";
+import fs from 'fs';
+import path from 'path';
 
-  if (ua.toLowerCase().includes("bot")) {
-    const gif = await fetch("https://vsn.pages.dev/invite.gif");
-    const buf = Buffer.from(await gif.arrayBuffer());
-    res.setHeader("Content-Type", "image/gif");
-    return res.send(buf);
+export default function handler(req, res) {
+  const userAgent = req.headers['user-agent'] || '';
+
+  // Discord embed pobiera GIF
+  if (userAgent.includes('Discordbot') || userAgent.includes('Slackbot')) {
+    const gifPath = path.join(process.cwd(), 'public', 'invite.gif');
+    const gifBuffer = fs.readFileSync(gifPath);
+    res.setHeader('Content-Type', 'image/gif');
+    return res.end(gifBuffer);
   }
 
-  return res.redirect(302, "https://discord.gg/UJsVfGpjxQ");
+  // Inna przeglądarka → redirect
+  res.writeHead(302, { Location: 'https://discord.gg/UJsVfGpjxQ' });
+  res.end();
 }
