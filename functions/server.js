@@ -4,7 +4,6 @@ export const onRequest = async ({ request, next }) => {
 
   if (pathname === "/invite.gif") {
     const accept = request.headers.get("Accept") || "";
-
     if (accept.includes("image")) {
       const gifUrl = new URL("../public/invite.gif", import.meta.url);
       const gifResponse = await fetch(gifUrl);
@@ -15,12 +14,7 @@ export const onRequest = async ({ request, next }) => {
     }
   }
 
-  if (pathname.startsWith("/css/") || 
-      pathname.startsWith("/js/") || 
-      pathname.startsWith("/images/") || 
-      pathname.endsWith(".png") || 
-      pathname.endsWith(".jpg") || 
-      pathname.endsWith(".ico")) {
+  if (pathname.startsWith("/css/") || pathname.startsWith("/js/") || pathname.startsWith("/images/") || pathname.endsWith(".png") || pathname.endsWith(".jpg") || pathname.endsWith(".ico")) {
     return next();
   }
 
