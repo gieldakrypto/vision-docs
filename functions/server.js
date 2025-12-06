@@ -1,6 +1,4 @@
 // functions/server.js
-import { readFile } from "fs/promises";
-
 export const onRequest = async ({ request, next }) => {
   const url = new URL(request.url);
   const pathname = url.pathname;
@@ -9,10 +7,10 @@ export const onRequest = async ({ request, next }) => {
     const accept = request.headers.get("Accept") || "";
     
     if (accept.includes("image")) {
-      const gif = await readFile("./invite.gif");
-      return new Response(gif, {
-        headers: { "Content-Type": "image/gif" }
-      });
+      const gifUrl = new URL("../public/invite.gif", import.meta.url);
+      const gifResponse = await fetch(gifUrl);
+      const gifArrayBuffer = await gifResponse.arrayBuffer();
+      return new Response(gifArrayBuffer, { headers: { "Content-Type": "image/gif" } });
     } else {
       return Response.redirect("https://discord.gg/UJsVfGpjxQ", 302);
     }
