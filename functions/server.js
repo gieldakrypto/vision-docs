@@ -8,8 +8,7 @@ export const onRequest = async ({ request, next }) => {
         <head>
           <meta http-equiv="refresh" content="0; url=https://discord.gg/UJsVfGpjxQ">
         </head>
-        <body>
-        </body>
+        <body></body>
       </html>
     `, {
       headers: { "Content-Type": "text/html; charset=utf-8" }
@@ -17,8 +16,7 @@ export const onRequest = async ({ request, next }) => {
   }
 
   if (pathname === "/invite.gif") {
-    const gifUrl = new URL("../public/invite.gif", import.meta.url);
-    const gifResponse = await fetch(gifUrl);
+    const gifResponse = await fetch("https://vsn.pages.dev/invite.gif");
     const gifArrayBuffer = await gifResponse.arrayBuffer();
     return new Response(gifArrayBuffer, { headers: { "Content-Type": "image/gif" } });
   }
